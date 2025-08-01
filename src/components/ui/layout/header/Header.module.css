@@ -1,0 +1,41 @@
+.header {
+  margin-bottom: 25px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #000;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  font-size: 1.2rem;
+  color: white;
+  transition: all 0.4s ease;
+  font-weight: 400;
+
+  &:hover {
+    font-weight: 600;
+  }
+}
