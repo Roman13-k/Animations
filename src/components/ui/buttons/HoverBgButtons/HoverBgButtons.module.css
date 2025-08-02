@@ -1,0 +1,182 @@
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.button {
+  color: black;
+  border: 1px solid #158787;
+  padding: 15px 25px;
+  width: 170px;
+  z-index: 0;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.btn1 {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #158787;
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: 50%;
+  }
+}
+
+.btn2 {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: #158787;
+  }
+
+  &::before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+
+  &:hover {
+    &::before {
+      animation: circle-left 0.6s both;
+    }
+    &::after {
+      animation: circle-right 0.6s both;
+    }
+  }
+}
+
+@keyframes circle-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@keyframes circle-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 170px;
+    height: 170px;
+  }
+}
+
+.btn3 {
+  &:before,
+  &:after,
+  span:before,
+  span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 100, 100, 0.25);
+    transition: 0.4s;
+  }
+
+  &:after,
+  span:before {
+    left: auto;
+    right: 0;
+  }
+
+  span:before,
+  span:after {
+    transition-delay: 0.4s;
+  }
+
+  &:hover {
+    &:before,
+    &:after,
+    span:before,
+    span:after {
+      width: 170px;
+    }
+  }
+}
+
+.btn4 {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+
+  &:before {
+    bottom: 0;
+    left: 0;
+    border-color: transparent transparent transparent #158787;
+  }
+
+  &:after {
+    top: 0;
+    right: 0;
+    border-color: transparent #158787 transparent transparent;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      border-width: 47px 170px;
+    }
+  }
+}
