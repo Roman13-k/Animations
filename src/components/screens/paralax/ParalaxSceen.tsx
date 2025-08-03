@@ -6,7 +6,7 @@ import { useParallax } from "@/hooks/useParalax";
 
 export default function ParalaxSceen() {
   const containerRef = useRef<null | HTMLElement>(null);
-  const { handleMouseLeave, handleMouseMove, scope } = useParallax(containerRef, {
+  const { handleMouseLeave, handleMouseMove } = useParallax(containerRef, {
     selector: "li",
   });
 
@@ -18,7 +18,7 @@ export default function ParalaxSceen() {
       className={styles.wrapper}>
       <div className={styles.container}>
         <h1 className={styles.title}>Мы играем словами — но в этих словах скрыта целая эпоха.</h1>
-        <ul ref={scope} className={styles.list}>
+        <ul className={styles.list}>
           {paralaxData.map((value, index) => (
             <li key={index} className={`${styles.item} ${styles[`item_${index + 1}`]}`}>
               {value}

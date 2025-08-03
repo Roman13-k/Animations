@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid blueviolet;
+  border-radius: 20px;
+  box-shadow: 1px 10px 1px 1px blueviolet;
+  padding: 60px;
+}
+
+.wrapper__btn {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 1px 5px 1px 1px rgb(156, 154, 154);
+  }
+}
+
+.wrapper__btn_success {
+  background-color: rgb(81, 229, 81);
+  color: green;
+}
+
+.wrapper__btn_warn {
+  background-color: rgb(237, 189, 100);
+  color: orange;
+}
+.wrapper__btn_error {
+  background-color: rgb(232, 113, 113);
+  color: red;
+}
+
+.toastWrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

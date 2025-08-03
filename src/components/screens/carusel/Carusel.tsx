@@ -67,10 +67,10 @@ export default function Carusel() {
       onTouchEnd={finalizeSwipe}
       className={styles.wrapper}>
       <div
-        style={{
-          transform: `translateX(${dragOffset}px)`,
-          transition: "transform 0.3s ease",
-        }}
+        // style={{
+        //   transform: `translateX(${dragOffset}px)`,
+        //   transition: "transform 0.3s ease",
+        // }}
         className={styles.carousel}>
         {caruselImages.map((src, i) => {
           const position = getPosition(i);
