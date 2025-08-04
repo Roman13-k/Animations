@@ -5,4 +5,5 @@ export const navData = [
   { link: "/carusel", name: "3DCarusel" },
   { link: "/paralax", name: "Paralax" },
   { link: "/toasts", name: "Toast" },
+  { link: "/transform", name: "Transform" },
 ];
