@@ -1,4 +1,4 @@
-import FollowButton from "@/components/ui/buttons/FollowButton";
+import FollowButton from "@/components/ui/shared/buttons/FollowButton";
 import Image from "next/image";
 import React, { useRef } from "react";
 import styles from "./ButtonsFrame.module.css";

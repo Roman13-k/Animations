@@ -3,7 +3,7 @@ import React from "react";
 import Container from "../../ui/layout/container/Container";
 import styles from "./ToastSceen.module.css";
 import { useToastContext } from "@/contexts/ToastContext";
-import Toast from "@/components/ui/toast/Toast";
+import Toast from "@/components/ui/shared/toast/Toast";
 import { AnimatePresence } from "motion/react";
 
 export default function ToastScreen() {

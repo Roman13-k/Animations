@@ -6,4 +6,5 @@ export const navData = [
   { link: "/paralax", name: "Paralax" },
   { link: "/toasts", name: "Toast" },
   { link: "/transform", name: "Transform" },
+  { link: "/flip", name: "FlipTimer" },
 ];
